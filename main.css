@@ -16,12 +16,54 @@ footer{
     text-align: center;
 }
 
+.colormatic {
+    background: linear-gradient(90deg, #ee110f, #edf200, #4dda05, #2affad, #2d2af4, #fd2aff, #ee110f);
+    background-size: 500% 100%;
+    animation: colormaticBgLeft 17s linear infinite;
+    text-shadow: 0px 0px 20px #000;
+    border-radius: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.colormatic_basic {
+    background: linear-gradient(90deg, #ee110f, #edf200, #4dda05, #2affad, #2d2af4, #fd2aff, #ee110f);
+    background-size: 500% 100%;
+    animation: colormaticBgLeft 17s linear infinite;
+    text-shadow: 0px 0px 20px #000;
+}
+
+@keyframes colormaticBgRight {
+    0% {
+        background-position: 500% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+@keyframes colormaticBgLeft {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 500% 100%;
+    }
+}
+
 code-block{
     border: solid;
     border-width: 1px;
     background-color: black;
     border-color: gray;
     font-family:'Courier New';
+}
+
+p.title_paragraph{
+    font-size: 32px;
+    font-weight: bolder;
 }
 
 

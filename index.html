@@ -1,19 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To The CMB Docs!</title>
+    <title>CMB Docs</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="icon" type="image/x-icon" href="docsicon.jpg">
 </head>
-<!--<script id="customElements">
-    var codeBlockElement = document.createElement("code-block");
-    codeBlockElement.addEventListener('click',
-    function(input){
-        alert("Seems to work.");
-    });
-    document.body.appendChild(codeBlockElement);
-</script> BLEH! no good-->
 <!-- The top nav menu bar; could have used menu tag for this-->
 <ul class="menu">
     <div class="iconarea">
@@ -23,14 +16,12 @@
         <!--<p class="iconoverlaytext">A website of BCM</p>-->
     </div>
     <button class="menubutton"><a class="menubuttonlink" href="index.html">Home</a></button>
-    <button class="menubutton"><a class="menubuttonlink" href="index.html">Projects</a></button>
-    <button class="menubutton"><a class="menubuttonlink" href="index.html">Mods For Games</a></button>
-    <button class="menubutton"><a class="menubuttonlink" href="index.html">Help</a></button>
+    <button class="menubutton"><a class="menubuttonlink" href="projects.html">Projects</a></button>
+    <button class="menubutton"><a class="menubuttonlink" href="modsforgames.html">Mods For Games</a></button>
+    <button class="menubutton"><a class="menubuttonlink" href="help.html">Help</a></button>
 </ul>
 <!-- the main page contents -->
-<body>
-
-<!--<button class="back">Back</button>-->
+<body class="main-page">
 
 <h1>Welcome to the CMB Docs!</h1>
 <p>We are currently trying to set these documents up.</p>
@@ -66,6 +57,7 @@
         </div>
     </a>
 </div>
+
 
 <noscript class="logoScript">Cannot fetch logos as javascript is disabled.</noscript>
 <script class="logoScript">
@@ -128,7 +120,7 @@
 </script>
 
 <div class="container_vertical" style="padding:16px">
-    <p>Current Projects:</p>
+    <div class="colormatic"><p class="title_paragraph">Current Projects:</p></div>
     <ol class="container" style="letter-spacing:2px">
         <li>Thingamajigs</li>
         <li>Thingamajigs 2</li>
