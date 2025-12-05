@@ -1,11 +1,117 @@
 <html lang="en">
 <head>
+    <title>Welcome To The CMB Docs!</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="docsicon.jpg">
 </head>
 <body>
+<img class="bcmLogoNormal" id="imgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logo.jpg"></img>
+<img id="fallImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoFall.png"></img>
+<img id="snowImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoSnow.png"></img>
+<p class="iconoverlaytext">Affiliate</p>
+
+<button class="back">Back</button>
 
 <h1>Welcome to the CMB Docs!</h1>
 <p>We are currently trying to set these documents up.</p>
+
+<p>Here, you can access all the CMB services and project docs. What does it contain? Well pretty much all the following:</p>
+
+<ul class="whatdoherelist">
+    <li>MC Mod Information for Thingamajigs and it's addons</li>
+    <li>How To Play CMB's Games, Legal Info and Controls</li>
+    <li>Specialized Tools made by CMB and how to use them</li>
+</ul>
+
+<div class="container_horizontal">
+<a href="https://www.youtube.com/watch?v=4_9W9so020A" class="ytlink">
+    <iframe referrerpolicy="no-referrer" height="190" width="320" src="https://markdown-videos-api.jorgenkh.no/youtube/4_9W9so020A"></iframe>
+    <p>Thingamajigs 2 Long Roads Addon</p>
+    <div class="tooltip" style="margin-left:70px">Showcase of version 0.0.3
+        <span class="tooltiptext">Out for NeoForge now!</span>
+    </div>
+</a>
+    <a href="https://www.youtube.com/watch?v=HUKdemEwnnM" class="ytlink">
+        <iframe referrerpolicy="no-referrer" height="190" width="320" src="https://markdown-videos-api.jorgenkh.no/youtube/HUKdemEwnnM"></iframe>
+        <p>Thingamajigs 2 Addons Showcase (OLD)</p>
+        <div class="tooltip" style="margin-left:40px">Showcase of addons for Thingamajigs 2
+            <span class="tooltiptext">Addons updated to 1.21.4!</span>
+        </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=HUKdemEwnnM" class="ytlink">
+        <iframe referrerpolicy="no-referrer" height="190" width="320" src="https://markdown-videos-api.jorgenkh.no/youtube/HUKdemEwnnM"></iframe>
+        <p>Thingamajigs 2 Addons Showcase (OLD)</p>
+        <div class="tooltip" style="margin-left:40px">Showcase of addons for Thingamajigs 2
+            <span class="tooltiptext">Addons updated to 1.21.4!</span>
+        </div>
+    </a>
+</div>
+
+<noscript class="logoScript">Cannot fetch logos as javascript is disabled.</noscript>
+<script class="logoScript">
+    // (C) BCM 2025, All Rights Reserved
+    // Dynamic Logo Loader
+    // date setup
+    const disableSeasonalImages = false;
+    const currentDate = new Date();
+    var day = currentDate.getDate();
+    var month = currentDate.getMonth();
+    var year = currentDate.getYear();
+
+    // get the logo and manipulate it
+    var imgElement = document.getElementById("imgId");
+    var fallImgElement = document.getElementById("fallImgId");
+    var snowImgElement = document.getElementById("snowImgId");
+    //var monthtext = document.getElementById("monthtext");
+
+    fallImgElement.width = 128;
+    fallImgElement.height = 128;
+    fallImgElement.alt = "Site Logo Fall";
+
+    snowImgElement.width = 128;
+    snowImgElement.height = 128;
+    snowImgElement.alt = "Site Logo Snow";
+
+    imgElement.width = 128;
+    imgElement.height = 128;
+    imgElement.alt = "Site Logo";
+
+    // if fall, show fall logo, otherwise, show other logos, like snowy or normal
+    //monthtext.textContent = currentDate.toString().toLowerCase() + "  month: " + month + " day: " +day;
+
+    if(month <= 10 && month > 7){ // fall
+        imgElement.style.display = "none";
+        fallImgElement.style.display = "block";
+        snowImgElement.style.display = "none";
+    }
+    else if(month > 10 || month < 1){
+        imgElement.style.display = "none";
+        fallImgElement.style.display = "none";
+        snowImgElement.style.display = "block";
+    }
+    else{
+        imgElement.style.display = "block";
+        fallImgElement.style.display = "none";
+        snowImgElement.style.display = "none";
+    }
+
+    if(disableSeasonalImages){
+        imgElement.style.display = "none";
+        fallImgElement.style.display = "none";
+        snowImgElement.style.display = "none";
+    }
+</script>
+
+<div class="container_vertical" style="padding:16px">
+    <p>Current Projects:</p>
+    <ol class="container" style="letter-spacing:2px">
+        <li>Thingamajigs</li>
+        <li>Thingamajigs 2</li>
+        <li>Thingamajigs 2 Long Roads</li>
+        <li>Thingamajigs 2 Railroadways</li>
+        <li>Dubious Deflective Spheres</li>
+    </ol>
+</div>
 
 </body>
 </html>
