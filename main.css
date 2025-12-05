@@ -9,14 +9,123 @@ body{
     color: white;
 }
 
+footer{
+    border-width: 2px;
+    border-color: white;
+    border-top-style: solid;
+    text-align: center;
+}
+
+code-block{
+    border: solid;
+    border-width: 1px;
+    background-color: black;
+    border-color: gray;
+    font-family:'Courier New';
+}
+
+
+/* Only used for menu buttons in menus, not to be used anywhere else */
+button:hover.menubutton{
+    color:black;
+    background-color:#beccff;
+    transition: 0.35s;
+    border-color: white;
+}
+/* Only used for menu buttons in menus, not to be used anywhere else */
+button:active.menubutton{
+    background-color:#8680ff;
+    color:white;
+    transition: 0.1s;
+}
+
 p.iconoverlaytext {
     margin-left: 40px;
 }
 
+/* Display for the main dynamic website icon in the menu area */
+div.iconarea{
+    justify-self:left;
+    padding-right:32px;
+}
+
+/* used for images that should be always 50% the size of the page and centered */
 img.noscalefifty{
     max-height: 50%;
     max-width: 50%;
     align-self: center;
+}
+
+/* general purpose navigation menu */
+ul.menu{
+    border: outset;
+    border-width: 4px;
+    border-color: #405bc4;
+    text-justify: inter-word;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 2px;
+    padding: 16px;
+    justify-content: center;
+    align-content: space-evenly;
+    place-content:center;
+}
+
+li.menubutton{
+    padding-left: 10px;
+    z-index: 5;
+}
+
+a.menubuttonlink{
+    color:white;
+    text-decoration: none;
+    text-align:center;
+}
+
+/* the menu button look used for all screens */
+@media screen{
+    button.menubutton{
+        width: 150px;
+        height: 70px;
+        max-height: 480px;
+        max-width: 480px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color:white;
+        background-color:#2a3a7c;
+        border: solid;
+        border-radius: 4px;
+        border-width: 1px;
+        font-size: 172%;
+        cursor:pointer;
+        z-index: 5;
+    }
+}
+/* the menu button look used for all screens that are like a portrait cell or otherwise smartphone */
+@media screen and (max-width:900px) and (min-width:1px){
+    button.menubutton{
+        min-width: 1px;
+        min-height: 1px;
+        width: 150px;
+        height: 70px;
+        max-height: 25px;
+        max-width: 80px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color:white;
+        background-color:#2a3a7c;
+        border: solid;
+        border-radius: 0px;
+        border-width: 1px;
+        font-size: 50%;
+        cursor:pointer;
+        z-index: 5;
+    }
 }
 
 
@@ -66,9 +175,20 @@ img.noscalefifty{
 }
 
 .container{
+    text-decoration: none;
     padding: 8pt;
     border-style: solid;
     border-color: white;
+}
+
+ol.container {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+ul.container {
+    text-decoration: none;
+    list-style-type: none;
 }
 
 @media screen{
@@ -100,13 +220,13 @@ img.noscalefifty{
 @media screen and (max-width:900px) and (min-width:1px){
     .container_horizontal {
         scale: 50%;
-        padding: 0pt;
+        padding: 20pt;
         margin-left: 0px;
         margin-right: 0px;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         text-align: center;
     }
 }
@@ -149,6 +269,12 @@ iframe{
     border-radius: 4px;
     align-content:inherit;
     color: white;
+}
+
+iframe.ytlinkcached{
+    referrerpolicy: "no-referrer";
+    height: 190;
+    width: 320;
 }
 
 button.back{

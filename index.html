@@ -6,13 +6,31 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="icon" type="image/x-icon" href="docsicon.jpg">
 </head>
+<!--<script id="customElements">
+    var codeBlockElement = document.createElement("code-block");
+    codeBlockElement.addEventListener('click',
+    function(input){
+        alert("Seems to work.");
+    });
+    document.body.appendChild(codeBlockElement);
+</script> BLEH! no good-->
+<!-- The top nav menu bar; could have used menu tag for this-->
+<ul class="menu">
+    <div class="iconarea">
+        <img style="padding-right:16px" id="imgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logo.jpg"></img>
+        <img style="padding-right:16px" id="fallImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoFall.png"></img>
+        <img style="padding-right:16px" id="snowImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoSnow.png"></img>
+        <!--<p class="iconoverlaytext">A website of BCM</p>-->
+    </div>
+    <button class="menubutton"><a class="menubuttonlink" href="index.html">Home</a></button>
+    <button class="menubutton"><a class="menubuttonlink" href="index.html">Projects</a></button>
+    <button class="menubutton"><a class="menubuttonlink" href="index.html">Mods For Games</a></button>
+    <button class="menubutton"><a class="menubuttonlink" href="index.html">Help</a></button>
+</ul>
+<!-- the main page contents -->
 <body>
-<img class="bcmLogoNormal" id="imgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logo.jpg"></img>
-<img id="fallImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoFall.png"></img>
-<img id="snowImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoSnow.png"></img>
-<p class="iconoverlaytext">Affiliate</p>
 
-<button class="back">Back</button>
+<!--<button class="back">Back</button>-->
 
 <h1>Welcome to the CMB Docs!</h1>
 <p>We are currently trying to set these documents up.</p>
@@ -27,24 +45,24 @@
 
 <div class="container_horizontal">
 <a href="https://www.youtube.com/watch?v=4_9W9so020A" class="ytlink">
-    <iframe referrerpolicy="no-referrer" height="190" width="320" src="https://markdown-videos-api.jorgenkh.no/youtube/4_9W9so020A"></iframe>
+    <iframe class="ytlinkcached" src="https://markdown-videos-api.jorgenkh.no/youtube/4_9W9so020A"></iframe>
     <p>Thingamajigs 2 Long Roads Addon</p>
     <div class="tooltip" style="margin-left:70px">Showcase of version 0.0.3
         <span class="tooltiptext">Out for NeoForge now!</span>
     </div>
 </a>
     <a href="https://www.youtube.com/watch?v=HUKdemEwnnM" class="ytlink">
-        <iframe referrerpolicy="no-referrer" height="190" width="320" src="https://markdown-videos-api.jorgenkh.no/youtube/HUKdemEwnnM"></iframe>
+        <iframe class="ytlinkcached" src="https://markdown-videos-api.jorgenkh.no/youtube/HUKdemEwnnM"></iframe>
         <p>Thingamajigs 2 Addons Showcase (OLD)</p>
         <div class="tooltip" style="margin-left:40px">Showcase of addons for Thingamajigs 2
             <span class="tooltiptext">Addons updated to 1.21.4!</span>
         </div>
     </a>
-    <a href="https://www.youtube.com/watch?v=HUKdemEwnnM" class="ytlink">
-        <iframe referrerpolicy="no-referrer" height="190" width="320" src="https://markdown-videos-api.jorgenkh.no/youtube/HUKdemEwnnM"></iframe>
-        <p>Thingamajigs 2 Addons Showcase (OLD)</p>
-        <div class="tooltip" style="margin-left:40px">Showcase of addons for Thingamajigs 2
-            <span class="tooltiptext">Addons updated to 1.21.4!</span>
+    <a href="https://www.youtube.com/watch?v=FaL7pva7mKU" class="ytlink">
+        <iframe class="ytlinkcached" src="https://markdown-videos-api.jorgenkh.no/youtube/FaL7pva7mKU"></iframe>
+        <p>Ye Old BEM Mod Lookback</p>
+        <div class="tooltip" style="margin-left:40px">Showcase of the old BEM mod
+            <span class="tooltiptext">Archived a while ago</span>
         </div>
     </a>
 </div>
@@ -59,6 +77,7 @@
     var day = currentDate.getDate();
     var month = currentDate.getMonth();
     var year = currentDate.getYear();
+    const importantVariable = "CBCMARR25"
 
     // get the logo and manipulate it
     var imgElement = document.getElementById("imgId");
@@ -66,20 +85,24 @@
     var snowImgElement = document.getElementById("snowImgId");
     //var monthtext = document.getElementById("monthtext");
 
-    fallImgElement.width = 128;
-    fallImgElement.height = 128;
+    fallImgElement.width = 64;
+    fallImgElement.height = 64;
     fallImgElement.alt = "Site Logo Fall";
 
-    snowImgElement.width = 128;
-    snowImgElement.height = 128;
+    snowImgElement.width = 64;
+    snowImgElement.height = 64;
     snowImgElement.alt = "Site Logo Snow";
 
-    imgElement.width = 128;
-    imgElement.height = 128;
+    imgElement.width = 64;
+    imgElement.height = 64;
     imgElement.alt = "Site Logo";
 
     // if fall, show fall logo, otherwise, show other logos, like snowy or normal
     //monthtext.textContent = currentDate.toString().toLowerCase() + "  month: " + month + " day: " +day;
+
+    if(importantVariable != "CBCMARR25"){
+        alert("Cannot load logo as site owner needs to make required variables work.")
+    }
 
     if(month <= 10 && month > 7){ // fall
         imgElement.style.display = "none";
@@ -116,4 +139,7 @@
 </div>
 
 </body>
+
+<footer>(C) 2025 CMB, All Rights Reserved</footer>
+
 </html>
