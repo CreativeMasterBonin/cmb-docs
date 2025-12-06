@@ -6,6 +6,7 @@
     <title>CMB Docs</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="icon" type="image/x-icon" href="docsicon.jpg">
+    <script src="logoScript.js" defer></script>
 </head>
 <!-- The top nav menu bar; could have used menu tag for this-->
 <ul class="menu">
@@ -13,12 +14,11 @@
         <img style="padding-right:16px" id="imgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logo.jpg"></img>
         <img style="padding-right:16px" id="fallImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoFall.png"></img>
         <img style="padding-right:16px" id="snowImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoSnow.png"></img>
-        <!--<p class="iconoverlaytext">A website of BCM</p>-->
     </div>
-    <button class="menubutton"><a class="menubuttonlink" href="index.html">Home</a></button>
-    <button class="menubutton"><a class="menubuttonlink" href="projects.html">Projects</a></button>
-    <button class="menubutton"><a class="menubuttonlink" href="modsforgames.html">Mods For Games</a></button>
-    <button class="menubutton"><a class="menubuttonlink" href="help.html">Help</a></button>
+    <button class="menubutton" onclick="window.location.href='index.html';">Home</button>
+    <button class="menubutton" onclick="window.location.href='projects.html';">Projects</button>
+    <button class="menubutton" onclick="window.location.href='modsforgames.html';">Mods For Games</button>
+    <button class="menubutton" onclick="window.location.href='help.html';">Help</button>
 </ul>
 <!-- the main page contents -->
 <body class="main-page">
@@ -60,64 +60,6 @@
 
 
 <noscript class="logoScript">Cannot fetch logos as javascript is disabled.</noscript>
-<script class="logoScript">
-    // (C) BCM 2025, All Rights Reserved
-    // Dynamic Logo Loader
-    // date setup
-    const disableSeasonalImages = false;
-    const currentDate = new Date();
-    var day = currentDate.getDate();
-    var month = currentDate.getMonth();
-    var year = currentDate.getYear();
-    const importantVariable = "CBCMARR25"
-
-    // get the logo and manipulate it
-    var imgElement = document.getElementById("imgId");
-    var fallImgElement = document.getElementById("fallImgId");
-    var snowImgElement = document.getElementById("snowImgId");
-    //var monthtext = document.getElementById("monthtext");
-
-    fallImgElement.width = 64;
-    fallImgElement.height = 64;
-    fallImgElement.alt = "Site Logo Fall";
-
-    snowImgElement.width = 64;
-    snowImgElement.height = 64;
-    snowImgElement.alt = "Site Logo Snow";
-
-    imgElement.width = 64;
-    imgElement.height = 64;
-    imgElement.alt = "Site Logo";
-
-    // if fall, show fall logo, otherwise, show other logos, like snowy or normal
-    //monthtext.textContent = currentDate.toString().toLowerCase() + "  month: " + month + " day: " +day;
-
-    if(importantVariable != "CBCMARR25"){
-        alert("Cannot load logo as site owner needs to make required variables work.")
-    }
-
-    if(month <= 10 && month > 7){ // fall
-        imgElement.style.display = "none";
-        fallImgElement.style.display = "block";
-        snowImgElement.style.display = "none";
-    }
-    else if(month > 10 || month < 1){
-        imgElement.style.display = "none";
-        fallImgElement.style.display = "none";
-        snowImgElement.style.display = "block";
-    }
-    else{
-        imgElement.style.display = "block";
-        fallImgElement.style.display = "none";
-        snowImgElement.style.display = "none";
-    }
-
-    if(disableSeasonalImages){
-        imgElement.style.display = "none";
-        fallImgElement.style.display = "none";
-        snowImgElement.style.display = "none";
-    }
-</script>
 
 <div class="container_vertical" style="padding:16px">
     <div class="colormatic"><p class="titleparagraph">Current Projects:</p></div>
@@ -131,7 +73,14 @@
 </div>
 
 </body>
-
-<footer>(C) 2025 CMB, All Rights Reserved</footer>
-
+<footer class="horizontalfooter">&copy; 2025 CreativeMasterBonin, All Rights Reserved.
+    <p>&verbar;</p>
+    <a href="https://github.com/CreativeMasterBonin/cmb-docs/issues">
+        Report Issues
+    </a>
+    <p>&verbar;</p>
+    <a href="https://theboninwebsite.wixsite.com/main">
+        The Bonin Website
+    </a>
+</footer>
 </html>

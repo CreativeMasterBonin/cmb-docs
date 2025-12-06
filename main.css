@@ -35,6 +35,26 @@ footer{
     text-shadow: 0px 0px 20px #000;
 }
 
+.centered-fadein{
+    text-align: center;
+    justify-content: center;
+    animation: fadein 0.45s ease-in-out;
+}
+
+section {
+    padding: 10px;
+}
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 @keyframes colormaticBgRight {
     0% {
         background-position: 500% 0%;
@@ -149,24 +169,23 @@ a.menubuttonlink{
 /* the menu button look used for all screens that are like a portrait cell or otherwise smartphone */
 @media screen and (max-width:900px) and (min-width:1px){
     button.menubutton{
-        min-width: 1px;
-        min-height: 1px;
-        width: 150px;
-        height: 70px;
-        max-height: 25px;
-        max-width: 80px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 20px;
-        padding-right: 20px;
+        min-width: 40px;
+        min-height: 16px;
+        width: 40px;
+        height: 30px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 1px;
+        padding-right: 1px;
         color:white;
         background-color:#2a3a7c;
         border: solid;
         border-radius: 0px;
-        border-width: 1px;
+        border-width: 0px;
         font-size: 50%;
         cursor:pointer;
         z-index: 5;
+        text-align: center;
     }
 }
 
@@ -221,6 +240,21 @@ a.menubuttonlink{
     padding: 8pt;
     border-style: solid;
     border-color: white;
+}
+
+.horizontalfooter{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 8;
+    padding: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+    justify-content: center;
+    align-items: baseline;
+    font-weight: lighter;
+    font-size: 70%;
+    gap: 4px;
+    grid-row-gap: 8px;
 }
 
 ol.container {
@@ -320,12 +354,20 @@ iframe.ytlinkcached{
 }
 
 button.back{
+    text-decoration: none;
     color:white;
     background-color:#2a3a7c;
     border: none;
     border-radius: 4pt;
     padding: 4pt 14pt;
     font-size: 125%;
+    cursor:pointer;
+}
+
+a.back{
+    text-decoration: none;
+    color:white;
+    border: none;
     cursor:pointer;
 }
 
@@ -337,6 +379,24 @@ button.back{
         height:100
     }
 }
+
+
+@media screen{
+    .centered-article-section{
+        text-align: center;
+        margin-left: 128px;
+        margin-right: 128px;
+    }
+}
+
+@media screen and (max-width:900px) and (min-width:1px){
+    .centered-article-section{
+        text-align: center;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
 
 p.animatedbox{
     animation-name: "animatedbox";
