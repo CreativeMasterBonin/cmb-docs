@@ -1,6 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&family=Palanquin+Dark:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 html{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
+    text-align: center;
+}
+
+@media screen{
+    .dropdown{
+        position: relative;
+    }
+    button.dropdown{
+        min-width: 64px;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        background-color:#2a3a7c;
+        color: white;
+        transition: 0.04s;
+        margin-bottom: 5%;
+        z-index: 2;
+    }
+    button.dropdown:hover{
+        display: flex;
+        flex-direction: column;
+        background-color:#ffffff;
+        transition: 0.27s;
+        color: black;
+        margin-bottom: 100%;
+        z-index: 3;
+    }
+    button.subdropdown{
+        min-width: 64px;
+        font-size: 70%;
+        border: none;
+        cursor: pointer;
+        display: block;
+        background-color:#45569b;
+        color: white;
+        transition: 0.1s;
+        z-index: 12;
+        transform: translate(0px,-10%)
+    }
+    button.subdropdown:hover{
+        min-width: 64px;
+        display: block;
+        cursor: pointer;
+        background-color:#ffffff;
+        transition: 0.27s;
+        color: black;
+        z-index: 12;
+        transform: translate(0px,-10%)
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        min-width: 200px;
+    }
+    a.dropdown-content{
+        background-color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    /* the hover style */
+    .dropdown:hover .dropdown-content{
+        display: block;
+        animation: fadein 0.45s ease-in-out;
+    }
+}
+
+@media screen{
+    .main-page{
+        padding-left: 160px;
+    }
+    .sidebar{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 2px;
+    }
+}
+
+@media screen and (max-width:900px) and (min-width:1px){
+    .main-page{
+        padding-left: 50px;
+    }
+    .sidebar{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 50px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+}
+
+.emoji {
+    font-family: "Noto Color Emoji", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.game-basic{
+    font-family: "Palanquin Dark", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body{
@@ -79,6 +198,7 @@ code-block{
     background-color: black;
     border-color: gray;
     font-family:'Courier New';
+    font-size: 12px;
 }
 
 p.titleparagraph{
