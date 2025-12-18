@@ -128,11 +128,94 @@ body{
     color: white;
 }
 
+@media screen{
+    body.mod-page-body{
+        font-family: "Noto Color Emoji", Palanquin Dark, sans-serif;
+    }
+}
+
 footer{
     border-width: 2px;
     border-color: white;
     border-top-style: solid;
     text-align: center;
+}
+
+.colormatic-text {
+    background: linear-gradient(90deg, #ee110f, #edf200, #4dda05, #2affad, #2d2af4, #fd2aff, #ee110f);
+    -webkit-background-clip: text;
+    background-size: 500% 100%;
+    background-clip: text;
+    color: transparent;
+    animation: colormaticTextRight 17s linear infinite;
+    text-shadow: 0px 0px 20px #000;
+    border-radius: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.colormatic-text-glow {
+    animation: colormaticBgGlowRight 17s infinite;
+    background: linear-gradient(90deg, #ee110f, #edf200, #4dda05, #2affad, #2d2af4, #fd2aff, #ee110f);
+    -webkit-background-clip: text;
+    background-size: 500% 100%;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 20px #ffffff;
+    border-radius: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+@keyframes colormaticBgGlowRight {
+    0% {
+        background-position: 500% 0%;
+        text-shadow: 0px 0px 16px #ee110f;
+    }
+    25%{
+        background-position: 450% 0%;
+        text-shadow: 0px 0px 16px #ff7700;
+    }
+    35%{
+        background-position: 350% 0%;
+        text-shadow: 0px 0px 16px #edf200;
+    }
+    40% {
+        background-position: 250% 0%;
+        text-shadow: 0px 0px 16px #00ff00;
+    }
+    52% {
+        background-position: 200% 0%;
+        text-shadow: 0px 0px 16px #00ffee;
+    }
+    75% {
+        background-position: 150% 0%;
+        text-shadow: 0px 0px 16px #1100ff;
+    }
+    85% {
+        background-position: 100% 0%;
+        text-shadow: 0px 0px 16px #ff00ff;
+    }
+    100% {
+        background-position: 0% 100%;
+        text-shadow: 0px 0px 16px #ee110f;
+    }
+}
+
+.colormatic-no-roundness {
+    background: linear-gradient(90deg, #ee110f, #edf200, #4dda05, #2affad, #2d2af4, #fd2aff, #ee110f);
+    background-size: 500% 100%;
+    animation: colormaticBgLeft 17s linear infinite;
+    text-shadow: 0px 0px 20px #000;
+    border-radius: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .colormatic {
@@ -189,6 +272,25 @@ section {
     }
     100% {
         background-position: 500% 100%;
+    }
+}
+
+
+@keyframes colormaticTextLeft {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 500% 100%;
+    }
+}
+
+@keyframes colormaticTextRight {
+    0% {
+        background-position: 500% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
     }
 }
 
@@ -285,6 +387,52 @@ a.menubuttonlink{
         cursor:pointer;
         z-index: 5;
     }
+    button.coasterleft, button.coasterright{
+        width: 72px;
+        height: 400px;
+        max-height: 480px;
+        max-width: 480px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color:white;
+        background-color:#2a3a7c;
+        border: solid;
+        border-radius: 4px;
+        border-width: 1px;
+        font-size: 300%;
+        cursor:pointer;
+        z-index: 5;
+    }
+    button:hover.coasterleft, button:hover.coasterright{
+        color:black;
+        background-color:#beccff;
+        transition: 0.35s;
+        border-color: white;
+    }
+    div.coaster {
+        font-family: Palanquin Dark, sans-serif;
+        display: flex;
+        min-height: 1px;
+        max-height: 720px;
+        background-color: #0b0b1c;
+        justify-content: center;
+        justify-self: center;
+        justify-items: center;
+        margin-left: 128px;
+        margin-right: 128px;
+    }
+    img.shouldgoawaywhensmall{
+        display: unset;
+    }
+    img.shouldonlybeonsmall{
+        display: none;
+    }
+    ul.mod-features{
+        list-style-type: square;
+        list-style-position: inside;
+    }
 }
 /* the menu button look used for all screens that are like a portrait cell or otherwise smartphone */
 @media screen and (max-width:900px) and (min-width:1px){
@@ -306,6 +454,43 @@ a.menubuttonlink{
         cursor:pointer;
         z-index: 5;
         text-align: center;
+    }
+    button.coasterleft, button.coasterright{
+        min-width: 40px;
+        min-height: 16px;
+        width: 40px;
+        height: 400px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 1px;
+        padding-right: 1px;
+        color:white;
+        background-color:#2a3a7c;
+        border: solid;
+        border-radius: 0px;
+        border-width: 0px;
+        font-size: 127%;
+        cursor:pointer;
+        z-index: 5;
+        text-align: center;
+    }
+    div.coaster {
+        scale: 50%;
+        display: flex;
+        min-height: 1px;
+        max-height: 720px;
+        background-color: #0b0b1c;
+        justify-content: center;
+        justify-self: center;
+        justify-items: center;
+        margin-left: 128px;
+        margin-right: 128px;
+    }
+    img.shouldgoawaywhensmall{
+        display: none;
+    }
+    img.shouldonlybeonsmall{
+        display: unset;
     }
 }
 
