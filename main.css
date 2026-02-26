@@ -433,6 +433,11 @@ a.menubuttonlink{
         list-style-type: square;
         list-style-position: inside;
     }
+    ul.mod-features-numbers{
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            list-style-type: square;
+            list-style-position: inside;
+        }
 }
 /* the menu button look used for all screens that are like a portrait cell or otherwise smartphone */
 @media screen and (max-width:900px) and (min-width:1px){
@@ -562,6 +567,11 @@ a.menubuttonlink{
     grid-row-gap: 8px;
 }
 
+/* use this paragraph type when making text with numbers in it */
+p.generic {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
 ol.container {
     text-decoration: none;
     list-style-type: none;
@@ -628,6 +638,15 @@ ul.whatdoherelist{
         color: white;
         cursor: pointer;
     }
+    a.link-no-colors{
+            scale: 90%;
+            padding: 16px, 16px, 16px, 16px;
+            align-content: center;
+            border:none;
+            border-radius: 0pt;
+            color: white;
+            cursor: pointer;
+    }
 }
 
 @media screen and (max-width:900px) and (min-width:1px){
@@ -640,6 +659,15 @@ ul.whatdoherelist{
         border-radius: 0pt;
         color: white;
         cursor: pointer;
+    }
+    a.link-no-colors{
+                scale: 99%;
+                padding: 16px, 16px, 16px, 16px;
+                align-content: center;
+                border:none;
+                border-radius: 0pt;
+                color: white;
+                cursor: pointer;
     }
 }
 
