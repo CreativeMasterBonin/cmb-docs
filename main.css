@@ -108,6 +108,22 @@ html{
         overflow-x: hidden;
         padding-top: 20px;
     }
+    .sidebar_p {
+        display: none;
+    }
+    a.sidebar_link {
+        font-size: 4px;
+    }
+    a.sidebar_link_white {
+        scale: 5%;
+        font-size: 4px;
+        padding: 16px, 16px, 16px, 16px;
+        align-content: center;
+        border:none;
+        border-radius: 0pt;
+        color: white;
+        cursor: pointer;
+    }
 }
 
 .emoji {
@@ -369,6 +385,18 @@ a.menubuttonlink{
 
 /* the menu button look used for all screens */
 @media screen{
+    a.sidebar_link {
+        font-size: 4px;
+    }
+    a.sidebar_link_white {
+        scale: 25%;
+        padding: 16px, 16px, 16px, 16px;
+        align-content: center;
+        border:none;
+        border-radius: 0pt;
+        color: white;
+        cursor: pointer;
+    }
     button.menubutton{
         width: 150px;
         height: 70px;
