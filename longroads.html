@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMB Docs - Projects - Long Roads</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" type="image/x-icon" href="docsicon.jpg">
+    <script src="logoScript.js" defer></script>
+</head>
+<ul class="menu">
+    <div class="iconarea">
+        <img style="padding-right:16px" id="imgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logo.jpg"></img>
+        <img style="padding-right:16px" id="fallImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoFall.png"></img>
+        <img style="padding-right:16px" id="snowImgId" src="https://raw.githubusercontent.com/CreativeMasterBonin/xtragamesrepo/refs/heads/main/theboninwebsite_logoSnow.png"></img>
+    </div>
+    <button class="menubutton" onclick="window.location.href='index.html';">Home</button>
+    <button class="menubutton" onclick="window.location.href='projects.html';">Projects</button>
+    <button class="menubutton" onclick="window.location.href='modsforgames.html';">Mods For Games</button>
+    <button class="menubutton" onclick="window.location.href='help.html';">Help</button>
+</ul>
+<body class="mod-page-body">
+
+<h1>Long Roads</h1>
+<h3>Welcome to Long Roads!</h3>
+<p class="generic">This mod is an addon to Thingamajigs 2 for NeoForge. In version 1.0.1+, you do not need Thingamajigs to run this mod.</p>
+
+<p class="generic">Additions include: asphalt and sidewalk blocks, paintbrushes with road marking patterns, and dynamic road signs.</p>
+<br><br>
+
+<img src="img/asphaltandsidewalkandpaintbrushes.png" style="height:90%;width:35%">
+
+<p class="generic-centered">Long Roads' asphalt comes in four ages. Each age affects walking speed, and the oldest asphalt will do nothing to your speed. Enchantments will increase movement speed on asphalt, except the oldest age.</p>
+<p class="generic-centered">Paintbrushes can be crafted from a brush and a dye of some kind. <code>🖱 Shift-Right click</code> to change the road pattern selected and <code>🖱 right-click</code> on a block to paint the selected road pattern. <code>🖱 Right-click</code> the paintbrush in the inventory to change the length (minimum of <code>2</code> and a maximum of <code>16</code>). There is also a multicolored brush which can paint mixed-color road patterns unto blocks.</p>
+<p class="generic-centered">Paintbrushes can also change asphalt into painted asphalt, if the current paintbrush road pattern can be applied in this way. Otherwise the pattern is applied on top of the block.</p>
+<br>
+
+<p class="generic-centered">There are currently no plans to place combined patterns into one block space.</p>
+
+<br><br>
+
+<p class="generic">Dynamic Road Signs use data-driven objects called <code-block>SignType</code-block>s. This means they are defined in datapacks.</p>
+<img src="img/dynamicsignv2.jpg" style="height:90%;width:35%">
+<br>
+<p class="generic">SignTypes are defined at the location "<code>data/thingamajigslongroads/thingamajigslongroads/sign_type/</code> ".</p>
+
+<div class="code-block">
+    <p class="generic">It should be noted that SignTypes have a very specific syntax.</p>
+    <code-block>
+    { "asset_id": "thingamajigslongroads:textures/signs/name_of_custom_sign_texture_file",<br>
+    "sign_model_type": "model_shape",<br>
+    "translation_key": "sign_type.name_of_custom_sign.name" }</code-block>
+    <br>
+    <p class="generic" style="max-width:50%;display:inline-block;flex: 0 0 100px;">Keep in mind that <code-block>asset_id</code-block> is a <code-block>ResourceLocation</code-block> (and in later versions, an <code-block>Identifier</code-block>) of a texture in a resourcepack. Make sure they match up exactly or there will be a missing texture for this <code-block>SignType</code-block>.</p>
+    <br>
+    <p class="generic" style="max-width:50%;display:inline-block;flex: 0 0 100px;">
+        The <code-block>model_shape</code-block> should be replaced with one of the following values:
+            <br>
+    </p>
+    <ol style="text-align:left;position:relative;left:45%;list-style-type:square">
+        <li><code-block>square</code-block>
+        <li><code-block>rectangle</code-block>
+        <li><code-block>double_square</code-block>
+    </ol>
+    <br>
+    <p class="generic">Though there is a <code-block>custom</code-block> value, it is useless, and reserved for signs which do not have any model that is currently supported.</p>
+</div>
+
+</body>
+</html>

@@ -310,13 +310,25 @@ section {
     }
 }
 
+.code-block{
+     border: solid;
+     border-width: 1px;
+     background-color: black;
+     border-color: gray;
+     font-family:'Courier New';
+     font-size: 12px;
+ }
+
 code-block{
     border: solid;
     border-width: 1px;
     background-color: black;
     border-color: gray;
+    text-align: center;
     font-family:'Courier New';
     font-size: 12px;
+    display: inline-block;
+    justify-content: space-between;
 }
 
 p.titleparagraph{
@@ -415,6 +427,44 @@ a.menubuttonlink{
         cursor:pointer;
         z-index: 5;
     }
+    button.menubuttonopmod{
+            width: 150px;
+            height: 70px;
+            max-height: 480px;
+            max-width: 480px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 20px;
+            padding-right: 20px;
+            color:white;
+            background-image: url("img/oldOPmodlogoanimated.gif")
+            background-color:#2a3a7c;
+            border: solid;
+            border-radius: 4px;
+            border-width: 1px;
+            font-size: 172%;
+            cursor:pointer;
+            z-index: 5;
+        }
+    button:hover.menubuttonopmod{
+                width: 150px;
+                height: 70px;
+                max-height: 480px;
+                max-width: 480px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                padding-left: 20px;
+                padding-right: 20px;
+                color:white;
+                background-image: none
+                background-color:#2a3a7c;
+                border: solid;
+                border-radius: 4px;
+                border-width: 1px;
+                font-size: 172%;
+                cursor:pointer;
+                z-index: 5;
+            }
     button.coasterleft, button.coasterright{
         width: 72px;
         height: 400px;
@@ -598,6 +648,12 @@ a.menubuttonlink{
 /* use this paragraph type when making text with numbers in it */
 p.generic {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+p.generic-centered {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding-left:25%;
+    padding-right:25%
 }
 
 ol.container {

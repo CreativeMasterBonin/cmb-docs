@@ -1,0 +1,8 @@
+#ignore files
+/shelf/
+/workspace.xml
+*.exe
+*.app
+.DS_Store
+.ds_store
+.idea
