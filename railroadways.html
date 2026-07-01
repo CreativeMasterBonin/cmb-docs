@@ -23,11 +23,56 @@
 <body class="mod-page-body">
 <h1>Railroadways</h1>
 <h3>Welcome to Railroadways!</h3>
-<p class="generic">This mod is an addon to Thingamajigs 2 for NeoForge. In version 1.0.1+, you do not need Thingamajigs to run this mod.</p>
+<img src="img/102updateimglower.jpg" style="width:35%;padding-left:25%;padding-right:25%;">
+<p class="generic">This mod is an addon to Thingamajigs 2 for NeoForge.<br> In version 1.0.1+, you do not need Thingamajigs to run this mod.</p>
+<hr>
+<p class="generic">This mod adds purple rails and dynamic railroad crossing components, dynamic railroad(way) signs and multipurpose signs that are highly customizable.</p>
+<p class="generic-centered">Each component uses a system called 'vertical redstone'. It is different to other mods which use true vertical redstone.
+    The vertical redstone system starts at the block that receives a redstone signal. It does not need to be low or high, it just needs to be anything but signal strength 0.
+    <br>
+    The starting block updates the <i>block above it</i>, then <i>that upper block</i> checks the block <i>below</i> if it is powered while telling the block <i>above itself</i> to update.<br>Thus, the cycle continues until all blocks are updated.
+    <br><br>Along with that, a link system exists to connect certain components to a controller, allowing wireless control of components, no redstone required on any of the linked components.</p>
 
-<p class="generic">Adds purple rails and dynamic railroad crossing components, and dynamic railroad(way) signs that are highly customizable.</p>
+    <br><br>
+    <p class="generic-centered">Imagine this scenario:<br>
+        Currently, you have a linking device (called a linker), controller, and crossing gates in your inventory. Place the controller down somewhere.
+        <br>Then, shift-right click the linking device on the controller, and the linker will say it is paired to the controller. Walk a little ways away and place down your crossing gates at least 1 block apart from each or more.
+        <br><br>
+        Now shift right click one-at-a-time on the crossing gates, and they will say they are paired to the controller.<br>
+        Apply a redstone signal to your controller, and the gates should go down.<br>Take away the signal, and the gates will go up.<br><br>
+        Now shift-right click on the gates to unlink them, and the controller will no longer command them to go down.
+        <br>Destroying the controller will remove all links it had, and the components will need to be removed to reset them.
+        Of course, destroying the linked components will cause the controller to remove links to them completely.
+        <br>All this is due to the fact that the controller checks what kind of component is at a given position, as storing entire sets of data in a block is bad for networking. Only a position <code>List</code> is stored in controllers.
+    </p>
+    <p class="generic-centered">
+        Tick priority is <code>low</code> to prevent major lag spikes as much as possible.
+    </p>
 
-<code>This page will update with more info soon.</code>
+<hr><br>
+<div class="code-block">
+    <p class="generic-centered">It should be noted that MultipurposeSignTypes have a very specific syntax.</p>
+    <code-block class="centered-more">
+        {
+        "alternate_on_state_texture": "thingamajigsrailroadways:textures/entity/multipurpose_sign_variants/on_alt_texture",
+        "alternating_interval": 20,
+        "asset_id": "thingamajigsrailroadways:custom_sign_id",
+        "off_state_texture": "thingamajigsrailroadways:textures/entity/multipurpose_sign_variants/off_texture",
+        "on_state_texture": "thingamajigsrailroadways:textures/entity/multipurpose_sign_variants/on_texture",
+        "translation_key": "multipurpose_sign_type.my_custom_sign.name"
+        }</code-block>
+    <br>
+    <p class="generic" style="max-width:50%;display:inline-block;flex: 0 0 100px;">Keep in mind that <code-block>asset_id</code-block> is a <code-block>ResourceLocation</code-block> (and in later versions, an <code-block>Identifier</code-block>) of a texture in a resourcepack.<br>In this case, the <code-block>asset_id</code-block> is more-so an identifying value than a texture location. <br> Make sure all texture files match up exactly with what is in the data file or there will be missing textures for this <code-block>MultipurposeSignType</code-block>.</p>
+    <br>
+    <p class="generic" style="max-width:50%;display:inline-block;flex: 0 0 100px;">
+        The <code-block>alternating_interval</code-block> is defined in <code-block>ticks</code-block>, and has a limit of <code-block>2-1024</code-block> ticks. Any other value will be clamped.
+        <br>
+        For reference, <code-block>20 ticks = 1 second</code-block>.<br>
+        In finer context, <code-block>50 milliseconds = 1 tick</code-block>, and they are <code>game ticks</code>, <i>not</i> <code>redstone ticks</code>.
+    </p>
+    <br>
+    <p class="generic-centered">Since Multipurpose Signs do not need alternating textures to function, the best practice is to fill all unused values with <code-block>MultipurposeSignTypes</code-block> with the default location "<code>thingamajigsrailroadways:textures/entity/multipurpose_sign_variants/multipurpose_sign</code>". <code-block>off_state_texture</code-block> and  <code-block>on_state_texture</code-block> always need to be defined.</p>
+</div>
 
 </body>
 </html>
